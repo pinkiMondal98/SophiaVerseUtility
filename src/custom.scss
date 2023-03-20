@@ -1,0 +1,31 @@
+// animation nav
+.animation-nav-view-user {
+    li {
+        position: relative;
+
+        a {
+            &:hover,
+            &.active {
+                color: whitesmoke;
+                background-color: blueviolet !important;
+
+                &::before {
+                    width: 100%;
+                    left: 0;
+                }
+            }
+        }
+    }
+}
+
+.hover-active-btn-view-user{
+    &:hover,
+            &.active {
+                background-color: rgb(255, 255, 255) !important;
+                &::before {
+                    width: 100%;
+                    left: 0;
+                }
+            }
+
+}
