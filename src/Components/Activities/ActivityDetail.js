@@ -19,7 +19,7 @@ import {
   } from "reactstrap";
 // import Flatpickr from "react-flatpickr";
 import Dropzone from "react-dropzone";
-import { useNavigate } from "react-router-dom";
+import { Navigate, useNavigate } from "react-router-dom";
 // import { Alert, Button, Card, CardBody, Col, Container, Input,  ModalHeader, PopoverBody, PopoverHeader, Row, UncontrolledPopover, UncontrolledTooltip } from 'reactstrap';
 import { Link } from 'react-router-dom';
 import activityBg from '../../assets/images/demo/sophiaverse-1.png';
@@ -71,6 +71,12 @@ export const ActivityDetail = () => {
       setmodal_successMessage(!modal_successMessage);
   }
 
+  function setTimer(modal_successMessage){
+    setmodal_successMessage(modal_successMessage);
+    setTimeout(() => {
+      history("/activities/activity-list");
+    }, 3000);
+  }
   const [selectedFiles, setselectedFiles] = useState([]);
 //   const [fileArr, setFileArr] = useState([]);
 
@@ -113,6 +119,7 @@ export const ActivityDetail = () => {
                   <p className="text-muted fs-15 mb-4">You have earned 500 points for your activity. Complete More challenges to earn more points</p>
                   <div className="hstack gap-2 justify-content-center">
                       <button className="btn btn-primary" onClick={() => history("/dashboard")}>Go To dashboard</button>
+                      <p className='text-align-middle mr-2'>Redirecting in....</p>
                       {/* <button className="btn btn-soft-success" ><i className="ri-links-line align-bottom"></i> Go to dashboard</button> */}
                   </div>
               </div>
@@ -216,7 +223,7 @@ export const ActivityDetail = () => {
                   </Row>
                 </div>
                 <div style={{display:"flex" , flexDirection:"row", flexWrap:"wrap", justifyContent:"space-around"}}>
-                <button type="button" className="mx-auto px-auto btn btn-primary waves-effect waves-light" onClick={() => setmodal_successMessage(true)}>Submit Information</button>
+                <button type="button" className="mx-auto px-auto btn btn-primary waves-effect waves-light" onClick={() => setTimer(true)}>Submit Information</button>
                 </div>
                 </div>
         </Form>
