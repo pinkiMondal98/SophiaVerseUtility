@@ -119,7 +119,7 @@ export const ActivityDetail = () => {
                   <p className="text-muted fs-15 mb-4">You have earned 500 points for your activity. Complete More challenges to earn more points</p>
                   <div className="hstack gap-2 justify-content-center">
                       <button className="btn btn-primary" onClick={() => history("/dashboard")}>Go To dashboard</button>
-                      <p className='text-align-middle mr-2'>Redirecting in....</p>
+                      <p className='text-align-middle m-2'>Redirecting in....</p>
                       {/* <button className="btn btn-soft-success" ><i className="ri-links-line align-bottom"></i> Go to dashboard</button> */}
                   </div>
               </div>
