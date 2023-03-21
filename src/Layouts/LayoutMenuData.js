@@ -31,9 +31,6 @@ const Navdata = () => {
       label: "Menu",
       isHeader: true,
     },
-
-
-
     {
       id: "dashboard",
       label: "Dashboard",
@@ -45,15 +42,14 @@ const Navdata = () => {
       },
     },
 
-
     {
-      id: "Earnpoints",
-      label: "Earn Points",
+      id: "Activities",
+      label: "Activities",
       icon: "bx bx-task",
-      link: "/activities/activity-detail",
+      link: "/activities/activity-list",
       click: function (e) {
         e.preventDefault();
-        setIscurrentState("Earnpoints");
+        setIscurrentState("Activities");
       },
     },
     {
@@ -66,7 +62,6 @@ const Navdata = () => {
         setIscurrentState("Profile");
       },
     },
-
 
   ];
   return <React.Fragment>{menuItems}</React.Fragment>;

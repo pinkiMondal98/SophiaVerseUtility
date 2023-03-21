@@ -4,6 +4,7 @@ import { Card, CardBody, CardHeader, Col, Container, DropdownItem, DropdownMenu,
 import classnames from 'classnames';
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Autoplay } from "swiper";
+import CountUp from "react-countup";
 
 import profileBg from '../../../assets/images/demo/banner1.jpg';
 import clientLogo from "../../../assets/images/demo/mindplex.svg"
@@ -72,7 +73,8 @@ export const ProfilePage = () => {
                             <Col>
                                 <div className="p-2">
                                     <h3 className="text-white mb-1">Alex Smith</h3>
-                                    <p className="text-white">alexSmith@gmail.com</p>
+                                    <p className="text-white">alexSmith@gmail.com<span className="p-2"><i
+                                            className="ri-wallet-line me-2 text-white fs-16 align-middle"></i>BX12654764576</span></p>
                                     <div className="hstack text-white gap-1">
                                         <div className="me-2"><i
                                             className="ri-map-pin-user-line me-2 text-white fs-16 align-middle"></i>California,
@@ -84,7 +86,7 @@ export const ProfilePage = () => {
                                 </div>
                             </Col>
 
-                            <Col xs={12} className="col-lg-auto order-last order-lg-0">
+                            <Col xs={12} className="col-lg-5 order-last order-lg-0">
                                 <Row className="text text-white text-center">
                                     <Col lg={4} xs={4}>
                                         <div className="p-2">
@@ -111,6 +113,7 @@ export const ProfilePage = () => {
                             {/* <Col className='col-4'></Col> */}
                             <Col className="col-12">
                                 <Row className="text text-white text-center">
+                                {/* <Col lg={3} xs={12}></Col> */}
                                     <Col lg={3} xs={12}>
                                         <Card className="card-animate card-dark">
                                             <div className="p-2">
@@ -128,6 +131,66 @@ export const ProfilePage = () => {
                                                             </Col>
                                                         </Row>
                                                     {/* </div> */}
+                                                </div>
+                                            </div>
+                                        </Card>
+                                    </Col>
+                                    {/* <Col lg={3} xs={12}>
+                                    <Card className="card-height-100 card-dark">
+                                        <CardBody>
+                                            <div className="d-flex align-items-center">
+                                                <div className="avatar-sm flex-shrink-0">
+                                                    <span className="avatar-title bg-primary rounded-circle fs-3">
+                                                        <i className="bx bx-wallet"></i>
+                                                    </span>
+                                                </div>
+                                                <div className="flex-grow-1 ps-3">
+                                                    <h4 className="mb-1 text-white" style={{float:'left'}}>Wallet Info</h4>
+                                                </div>
+                                            </div>
+                                            <div className="pt-1">
+                                                <h4 className="fs-14 fw-semibold ff-secondary mb-0">
+                                                    <span className="counter-value">
+                                                        <CountUp start={0} end={559526} separator={","} decimals={3} duration={4} />
+                                                    </span>
+                                                </h4>
+                                                <p className="mt-2 mb-0"><span className="badge bg-soft-warning text-danger mb-0 me-1 text-white fs-14"> <i className="ri-hashtag align-bottom"></i>BX12654764576</span></p>
+                                            </div>
+                                        </CardBody>
+                                    </Card>
+                                    </Col> */}
+                                    <Col lg={6} xs={12}>
+                                        <Card className="card-animate card-dark">
+                                            <div className="p-2">
+                                                <h4 className="text-white mb-1">Wallet Info</h4>
+                                                <div className="fs-14 mb-0">
+                                                    <Row>
+                                                        <Col className='col-6'>
+                                                            <div className="d-flex align-items-center" style={{gap:'1rem',float:'right'}}>
+                                                                <div className='avatar-sm flex-shrink-0' >
+                                                                    <span className='avatar-title bg-primary rounded-circle fs-16 text-white shadow'><i className="bx bx-wallet "></i></span>
+                                                                </div>
+                                                                <div className='d-flex align-items-end justify-content-between mt-2' >
+                                                                    Points<span className="counter-value" style={{marginLeft:'1rem'}}>
+                                                                        <CountUp start={0} end={559526} separator={","} decimals={0} duration={4} />
+                                                                    </span>
+                                                                </div>
+                                                            </div>
+                                                        </Col>
+                                                        <Col className='col-6'>
+                                                            <div className="d-flex align-items-center" style={{gap:'1rem'}}>
+                                                                <div className='avatar-sm flex-shrink-0' >
+                                                                    <span className='avatar-title bg-danger rounded-circle fs-16 text-white shadow'><i className="bx bx-pin"></i></span>
+                                                                </div>
+                                                                <div className='d-flex align-items-end justify-content-between mt-2' style={{overflow:'auto'}}>
+                                                                    ID<span style={{marginLeft:'1rem'}}>
+                                                                    BX12654764576
+                                                                    </span>
+                                                                </div>
+                                                            </div>
+                                                        </Col>
+                                                    </Row>
+                                                    
                                                 </div>
                                             </div>
                                         </Card>
@@ -153,28 +216,7 @@ export const ProfilePage = () => {
                                             </div>
                                         </Card>
                                     </Col>
-                                    <Col lg={3} xs={12}>
-                                        <Card className="card-animate card-dark">
-                                            <div className="p-2">
-                                                <h4 className="text-white mb-1">BX0290325995</h4>
-                                                <div className="fs-14 mb-0">
-                                                    {/* <div className='avatar-sm flex-shrink-0'> style={{background:'#212529'}} */}
-                                                        <Row>
-                                                            <Col className='col-6'>
-                                                                <div className='avatar-sm flex-shrink-0' style={{float:'right'}}>
-                                                                    <span className='avatar-title bg-primary rounded-circle fs-16 text-white shadow'><i className="bx bx-user-pin"></i></span>
-                                                                </div>
-                                                            </Col>
-                                                            <Col className='col-6'>
-                                                                <span className='d-flex align-items-end justify-content-between mt-2'>Wallet ID</span>
-                                                            </Col>
-                                                        </Row>
-                                                    {/* </div> */}
-                                                </div>
-                                            </div>
-                                        </Card>
-                                    </Col>
-                                    <Col lg={3} xs={12}>
+                                    {/* <Col lg={3} xs={12}>
                                         <Card className="card-animate card-dark">
                                             <div className="p-2">
                                                 <h4 className="text-white mb-1">24.3K</h4>
@@ -192,7 +234,7 @@ export const ProfilePage = () => {
                                                 </div>
                                             </div>
                                         </Card>
-                                    </Col>
+                                    </Col> */}
                                 </Row>
                             </Col>
                         </Row>
@@ -200,7 +242,7 @@ export const ProfilePage = () => {
 
                  <div className='mt-6 mb-3'>
                     <Row >
-                        <Col xxl={3}>
+                        <Col lg={12} md={12} xs={12} >
                             {/* <Card>
                                 <CardBody>
                                     <h5 className="card-title mb-5">Complete Your Profile</h5>

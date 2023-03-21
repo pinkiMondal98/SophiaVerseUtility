@@ -12,9 +12,9 @@ export const EditProfileForm = () => {
             <CardHeader>
                 <h5>Edit Personal Info</h5>
             </CardHeader>
-            <CardBody className="p-4">
+            <CardBody className="p-2">
             <Form>
-                <Row>
+                <Row style={{textAlign:'left'}}>
                     <Col lg={6}>
                         <div className="mb-3">
                             <Label htmlFor="firstnameInput" className="form-label">First
@@ -63,21 +63,21 @@ export const EditProfileForm = () => {
                         </div>
                     </Col> */}
                     
-                    <Col lg={4}>
+                    <Col lg={6}>
                         <div className="mb-3">
                             <Label htmlFor="cityInput" className="form-label">City</Label>
                             <Input type="text" className="form-control" id="cityInput"
                                 placeholder="City" defaultValue="California" />
                         </div>
                     </Col>
-                    <Col lg={4}>
+                    <Col lg={6}>
                         <div className="mb-3">
                             <Label htmlFor="countryInput" className="form-label">Country</Label>
                             <Input type="text" className="form-control" id="countryInput"
                                 placeholder="Country" defaultValue="United States" />
                         </div>
                     </Col>
-                    <Col lg={4}>
+                    <Col lg={12}>
                         <div className="mb-3">
                             <Label htmlFor="zipcodeInput" className="form-label">Zip
                                 Code</Label>

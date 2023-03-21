@@ -100,8 +100,6 @@ const List = () => {
 
         }
     ];
-
-
     const activebtn = (ele) => {
         if (ele.closest("button").classList.contains("active")) {
             ele.closest("button").classList.remove("active");
@@ -109,7 +107,6 @@ const List = () => {
             ele.closest("button").classList.add("active");
         }
     };
-
     return (
         <React.Fragment>
             <Row className="g-4 mb-3">
