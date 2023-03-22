@@ -15,13 +15,13 @@ import { Link } from 'react-router-dom';
 
 
 const data = [
-    [1,"AI Code", "write an AI code to fetch last 5 transactions to earn points","12/09/2022",1,500, '4358'],
-    [2,"Tell us about Mindplex", "Let us know about the different dimensions they work on","11/10/2022",1,34, '8358'],
-    [3,"Awareness", "build something to spread the awareness of Mindplex magazine","15/12/2022",2,243, '8658'],
-    [4,"Join our business", "help peoples to interact or collaborate here.","21/09/2022",1,354,'5358'],
-    [5,"Watch a Video", "help peoples to get the right information.", "13/08/2022",1, 232,'1234'],
-    [6, "Join our business", "help peoples to interact or collaborate here.", "22/09/2022",1,500, '2358'],
-    [7,"Watch a Video", "help peoples to get the right information.", "23/08/2022",1, 321,'4334'],
+    [1,"AI Code", "write an AI code to fetch last 5 transactions to earn points","12/09/2022",500, '4358'],
+    [2,"Tell us about Mindplex", "Let us know about the different dimensions they work on","11/10/2022",34, '8358'],
+    [3,"Awareness", "build something to spread the awareness of Mindplex magazine","15/12/2022",243, '8658'],
+    [4,"Join our business", "help peoples to interact or collaborate here.","21/09/2022",354,'5358'],
+    [5,"Watch a Video", "help peoples to get the right information.", "13/08/2022",232,'1234'],
+    [6, "Join our business", "help peoples to interact or collaborate here.", "22/09/2022",500, '2358'],
+    [7,"Watch a Video", "help peoples to get the right information.", "23/08/2022",321,'4334'],
 
 ];
 
@@ -59,7 +59,7 @@ export const ActivityTable = () => {
                 },
                 {name:"Description",width:"270px"},
                 {name:"Date",width:"100px",formatter : (cell) => _(<div style={{fontWeight:"bold"}} className="btn btn-soft-primary">{cell} </div>) },
-                //{name:"Completed",width:"100px" },
+                // {name:"Completed",width:"100px" },
                 {name:"Points Earned",width:"130px" ,formatter : (cell) => _(<div style={{fontWeight:"bold"}} className=" text-success">{cell} </div>) },
                 // {
                 //     name:"Trx Hash",
