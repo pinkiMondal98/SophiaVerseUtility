@@ -59,7 +59,7 @@ export const ActivityTable = () => {
                 },
                 {name:"Description",width:"270px"},
                 {name:"Date",width:"100px",formatter : (cell) => _(<div style={{fontWeight:"bold"}} className="btn btn-soft-primary">{cell} </div>) },
-                {name:"Completed",width:"100px" },
+                //{name:"Completed",width:"100px" },
                 {name:"Points Earned",width:"130px" ,formatter : (cell) => _(<div style={{fontWeight:"bold"}} className=" text-success">{cell} </div>) },
                 // {
                 //     name:"Trx Hash",
