@@ -120,7 +120,7 @@ const UserRevenueCharts = ({ dataColors, series, height, width }) => {
         series={series}
         type="line"
         height={height}
-        width={'86%'}
+        width={"86%"}
         className="apex-charts"
       />
     </React.Fragment>
@@ -230,7 +230,6 @@ const RevenueCharts = ({ dataColors, series, height, width }) => {
             return y;
           },
         },
-
       ],
     },
   };
@@ -242,23 +241,19 @@ const RevenueCharts = ({ dataColors, series, height, width }) => {
         series={series}
         type="line"
         height={height}
-        width={'86%'}
+        width={"86%"}
         className="apex-charts"
       />
     </React.Fragment>
   );
 };
 
-
-
-
-
 const StoreVisitsCharts = ({ dataColors }) => {
   var chartDonutBasicColors = getChartColorsArray(dataColors);
 
-  const series = [44, 55, 41];
+  const series = [440.23, 587.66, 413.56];
   var options = {
-    labels: ["Gift Card", "Donation", "Event"],
+    labels: ["Gift Card Points", "Donation Points", "Event Points"],
     chart: {
       height: 333,
       type: "donut",
@@ -275,6 +270,17 @@ const StoreVisitsCharts = ({ dataColors }) => {
       },
     },
     colors: chartDonutBasicColors,
+    tooltip: {
+      shared: true,
+      y: {
+        formatter: function (
+          value,
+          { series, seriesIndex, dataPointIndex, w }
+        ) {
+          return `${value}k`;
+        },
+      },
+    },
   };
   return (
     <React.Fragment>
@@ -289,6 +295,5 @@ const StoreVisitsCharts = ({ dataColors }) => {
     </React.Fragment>
   );
 };
-
 
 export { UserRevenueCharts, RevenueCharts, StoreVisitsCharts };

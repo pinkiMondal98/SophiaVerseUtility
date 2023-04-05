@@ -1,5 +1,16 @@
 import React from "react";
-import { Card, CardBody, CardHeader, Col, Container, DropdownItem, DropdownMenu, DropdownToggle, Row, UncontrolledDropdown } from "reactstrap";
+import {
+  Card,
+  CardBody,
+  CardHeader,
+  Col,
+  Container,
+  DropdownItem,
+  DropdownMenu,
+  DropdownToggle,
+  Row,
+  UncontrolledDropdown,
+} from "reactstrap";
 
 import Widgets from "./Widgets.js";
 import Marketplace from "./Marketplace";
@@ -18,17 +29,14 @@ import UserCountry from "./UserCountry.js";
 import FeatherIcon from "feather-icons-react";
 import activity1 from "../../../assets/images/brands/slack.png";
 import { ActivityHistory } from "../../Riya/Components/ActivityHistoryTable.js";
-import {RedemptionHistory} from '../../../Components/RedemptionHistoryTable';
-import dashboardBg from "../../../assets/images/demo/sophia501.jpeg";
+import { RedemptionHistory } from "../../../Components/RedemptionHistoryTable";
 import sophiaverse2 from "../../../assets/images/demo/sophia5.png";
 import Bgd from "../../../assets/images/bg-d.png";
 const Dashboard = () => {
   // const headerImage ='https://uploads-ssl.webflow.com/622c1e6eb1cd192ecedc6225/622ef0219152c96bc2ea796e_sophia-kv.jpg';
 
-
   const providerData = [1234, 1980, 1456, 1678, 1289];
   const destinationData = [1234, 2345, 4456, 3567, 1345];
-
 
   const Destination = [
     {
@@ -84,14 +92,13 @@ const Dashboard = () => {
       imgbgColor: `warning`,
       img: activity1,
       label: `AI Code`,
-      caption: `write an AI code to fetch last 5 transactions to earn points`,
+      caption: `Write an AI code to fetch last 5 transactions to earn points`,
       number: `40/60`,
       progressBar: 100 * Number(40 / 60) + `%`,
-      points: 2345,
+      points: 23,
       date: `10 Jul, 2021`,
-      link: "/activities/activity-detail"
+      link: "/activities/activity-detail",
     },
-
   ];
 
   const history = useNavigate();
@@ -105,26 +112,36 @@ const Dashboard = () => {
 
   return (
     <React.Fragment>
-      <div className="page-content" style={{backgroundImage:"url(" + dashboardBg + ")", backgroundPosition: "center",backgroundSize: "cover"}}>
+      <div
+        className="page-content"
+      >
         <Container fluid>
           <Row>
             <Col>
-                <Widgets />
+              <Widgets />
             </Col>
           </Row>
           <Row>
-            <Col lg={9}>
+            <Col lg={12}>
               {(projectLists || []).map((item, index) => (
                 <React.Fragment key={index}>
                   <div className="project-card">
                     <Card className="card-height-100">
                       <div className="card-header border-0 align-items-center d-flex">
-                        <h4 className="card-title mb-0 flex-grow-1  text-dark">Last Activity</h4>
-                        <button type="button" onClick={() => {
-                          history(`/activities`);
-                        }} className="btn btn-secondary btn-sm" >Earn Points</button>
+                        <h4 className="card-title mb-0 flex-grow-1  text-dark">
+                          Last Activity
+                        </h4>
+                        <button
+                          type="button"
+                          onClick={() => {
+                            history(`/activities`);
+                          }}
+                          className="btn btn-secondary btn-sm"
+                        >
+                          Earn Points
+                        </button>
                       </div>
-                      <CardBody className=' card-animate pt-0 pb-0'>
+                      <CardBody className=" card-animate pt-0 pb-0">
                         <div className="d-flex flex-column h-100">
                           <div className="d-flex">
                             <div className="flex-grow-1">
@@ -137,30 +154,60 @@ const Dashboard = () => {
                                     <i className="ri-star-fill"></i>
                                   </span>
                                 </button> */}
-                                <UncontrolledDropdown direction='start'>
-                                  <DropdownToggle tag="button" className="btn btn-link text-muted p-1 mt-n2 py-0 text-decoration-none fs-15 shadow-none">
-                                    <FeatherIcon icon="more-horizontal" className="icon-sm" />
+                                <UncontrolledDropdown direction="start">
+                                  <DropdownToggle
+                                    tag="button"
+                                    className="btn btn-link text-muted p-1 mt-n2 py-0 text-decoration-none fs-15 shadow-none"
+                                  >
+                                    <FeatherIcon
+                                      icon="more-horizontal"
+                                      className="icon-sm"
+                                    />
                                   </DropdownToggle>
 
                                   <DropdownMenu className="dropdown-menu-end">
-                                    <DropdownItem href={item.link ? item.link : "#"}><i className="ri-eye-fill align-bottom me-2 text-muted"></i> View</DropdownItem>
+                                    <DropdownItem
+                                      href={item.link ? item.link : "#"}
+                                    >
+                                      <i className="ri-eye-fill align-bottom me-2 text-muted"></i>{" "}
+                                      View
+                                    </DropdownItem>
                                     <div className="dropdown-divider"></div>
                                   </DropdownMenu>
                                 </UncontrolledDropdown>
                               </div>
                             </div>
                           </div>
-                          <div className="d-flex mb-2" onClick={() => history(item.link)} style={{pointerEvents:'auto'}}>
+                          <div
+                            className="d-flex mb-2"
+                            onClick={() => history(item.link)}
+                            style={{ pointerEvents: "auto" }}
+                          >
                             <div className="flex-shrink-0 me-3">
                               <div className="avatar-sm">
-                                <span className={"avatar-title rounded p-2 bg-soft-" + item.imgbgColor}>
-                                  <img src={item.img} alt="" className="img-fluid p-1" />
+                                <span
+                                  className={
+                                    "avatar-title rounded p-2 bg-soft-" +
+                                    item.imgbgColor
+                                  }
+                                >
+                                  <img
+                                    src={item.img}
+                                    alt=""
+                                    className="img-fluid p-1"
+                                  />
                                 </span>
                               </div>
                             </div>
                             <div className="flex-grow-1">
-                              <h5 className="mb-1 fs-15"><Link to="#" className="text-dark">{item.label}</Link></h5>
-                              <p className="text-muted text-truncate-two-lines mb-3">{item.caption}</p>
+                              <h5 className="mb-1 fs-15">
+                                <Link to="#" className="text-dark">
+                                  {item.label}
+                                </Link>
+                              </h5>
+                              <p className="text-white text-truncate-two-lines mb-3">
+                                {item.caption}
+                              </p>
                             </div>
                             {/* <img src={Bgd} alt="" className="img-fluid" /> */}
                           </div>
@@ -175,19 +222,16 @@ const Dashboard = () => {
                           </div>
                           <div className="flex-shrink-0">
                             <div className="text-muted">
-                              <i className="ri-calendar-event-fill me-1 align-bottom"></i> {item.date}
+                              <i className="ri-calendar-event-fill me-1 align-bottom"></i>{" "}
+                              {item.date}
                             </div>
                           </div>
                         </div>
                       </div>
                     </Card>
                   </div>
-
                 </React.Fragment>
               ))}
-            </Col>
-            <Col lg={3}>
-              <img className="" width="100%" height={204} style={{width:'18rem'}} src={sophiaverse2}></img>
             </Col>
           </Row>
           <Row>
@@ -196,25 +240,16 @@ const Dashboard = () => {
             </Col>
             <Col lg={5}>
               <RedeemedAmount />
-              {/* <UsersRevenue title='Food Providers' provider={provider} dataColor='[ "--vz-warning", "--vz-primary", "--vz-danger", "--vz-success", "--vz-secondary"]' series={providerData} lable={["Save On Foods", "Urban Fare",
-                "Simple Goodness",
-                "Nesters Market",
-                "Mein Hardt"]} /> */}
-            </Col>
-            {/* <Col lg={3}>
-              <UsersRevenue title='Delivered Food' provider={Destination} dataColor='[ "--vz-warning", "--vz-primary", "--vz-danger", "--vz-success", "--vz-secondary"]' series={destinationData} lable={["Refugees", "Farmers", "Charities", "Volunteer", "Non-profits"]} />
-            </Col> */}
-          </Row>
-
-         
-          <Row className="">
-            <Col lg={12}>
-              <ActivityHistory/>
             </Col>
           </Row>
           <Row className="">
             <Col lg={12}>
-              <RedemptionHistory/>
+              <ActivityHistory />
+            </Col>
+          </Row>
+          <Row className="">
+            <Col lg={12}>
+              <RedemptionHistory />
             </Col>
           </Row>
         </Container>

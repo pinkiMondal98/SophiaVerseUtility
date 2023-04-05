@@ -212,3 +212,11 @@ input:-webkit-autofill:active{
     color: var(--#{$prefix}body-color) !important;
     -webkit-text-fill-color: var(--#{$prefix}body-color) !important;
 }
+
+@media (max-width:600px) {
+  #wallet-card{ float:none}	
+}
+
+@media (min-width:601px) {
+  #wallet-card{ float:right}	
+}

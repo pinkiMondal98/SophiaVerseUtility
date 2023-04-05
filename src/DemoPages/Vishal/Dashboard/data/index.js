@@ -78,48 +78,47 @@ import spacetech from "../../../../assets/images/companies/img-8.png";
 const clientsData = [
   {
     name: "Huddle",
-    logo: huddleLogo
+    logo: huddleLogo,
   },
   {
     name: "Biswap",
-    logo: biswap
+    logo: biswap,
   },
   {
     name: "Apex Tech",
-    logo: apextech
+    logo: apextech,
   },
   {
     name: "Near",
-    logo: near
+    logo: near,
   },
   {
     name: "High Tech",
-    logo: hightech
+    logo: hightech,
   },
   {
     name: "Soft Tech",
-    logo: softtech
+    logo: softtech,
   },
   {
     name: "Fox Tech",
-    logo: foxtech
+    logo: foxtech,
   },
   {
     name: "Arrow Tech",
-    logo: arrowtech
+    logo: arrowtech,
   },
   {
     name: "Arive",
-    logo: tvsarive
+    logo: tvsarive,
   },
   {
     name: "Space Tech",
-    logo: spacetech
+    logo: spacetech,
   },
 ];
 
 const userData = [
-
   {
     id: 3,
     img: avatar3,
@@ -177,13 +176,13 @@ const ecomWidgets = [
   {
     id: 4,
     cardColor: "info",
-    label: "Total Points",
+    label: "Balance Points",
     counter: "865",
     bgcolor: "danger",
     icon: "bx bx-wallet",
     decimals: 0,
     prefix: "",
-    suffix: ""
+    suffix: "",
   },
   {
     id: 1,
@@ -194,7 +193,7 @@ const ecomWidgets = [
     icon: "bx bxs-medal",
     decimals: 0,
     prefix: "",
-    suffix: ""
+    suffix: "",
   },
 
   {
@@ -209,7 +208,7 @@ const ecomWidgets = [
     suffix: "",
   },
   {
-  id: 4,
+    id: 4,
     cardColor: "info",
     label: "Redeemed Points",
     counter: "865",
@@ -217,19 +216,7 @@ const ecomWidgets = [
     icon: "bx bxs-down-arrow-circle",
     decimals: 0,
     prefix: "",
-    suffix: ""
-  },
-
-  {
-    id: 3,
-    cardColor: "success",
-    label: "Redeemed Amount",
-    counter: "798",
-    bgcolor: "secondary",
-    icon: "bx bxs-badge-dollar",
-    decimals: 0,
-    prefix: "$",
-    suffix: "k",
+    suffix: "",
   },
 
   // {
@@ -254,27 +241,28 @@ const ecomWidgets = [
   //   prefix: "",
   //   suffix: "kt",
   // },
-
 ];
 
+const activitiesData = [
+  {
+    name: "Walk 10 km",
+    des: "The task is designed for people who haven't started fitness walking and who don't have major health issues",
+  },
+  {
+    name: "Read Blog",
+    des: "Read the blog improve the reading skill and earn points",
+  },
 
-const activitiesData = [{
-  name: "Walk 10 km",
-  des: "The task is designed for people who haven't started fitness walking and who don't have major health issues"
-}, {
-  name: "Read Blog",
-  des: "Read the blog improve the reading skill and earn points"
-},
+  {
+    name: "Watch Videos",
+    des: "Watch usefull videos to learn more and earn points",
+  },
 
-{
-  name: "Watch Videos",
-  des: "Watch usefull videos to learn more and earn points"
-},
-
-{
-  name: "Two hour Workout",
-  des: "daily morning exercise kick-starts your metabolism, gets your heart pumping and may help lower your blood pressure"
-},];
+  {
+    name: "Two hour Workout",
+    des: "daily morning exercise kick-starts your metabolism, gets your heart pumping and may help lower your blood pressure",
+  },
+];
 
 const recentOrders = [
   {
@@ -398,7 +386,6 @@ const recentOrders = [
 ];
 
 export {
-
   expolreNow,
   aution,
   NFTRanking,
@@ -412,14 +399,11 @@ export {
   nftArtworkData,
   popularCreatorsNFT,
   marketPlacewidget,
-
   ecomWidgets,
   recentOrders,
-
   clientsData,
   userData,
   activitiesData,
-
   topartWork,
   topartWorkUser,
   featuredNFTData,
@@ -431,6 +415,4 @@ export {
   monthMarketplaceData,
   halfyearMarketplaceData,
   yearMarketplaceData,
-
-
 };
